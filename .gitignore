@@ -1,3 +1,9 @@
+# Ignore examples/ directory
+examples/
+
+# Ignore .conda_config dotfile
+.conda_config
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
