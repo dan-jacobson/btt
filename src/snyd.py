@@ -184,22 +184,19 @@ def calc_args(d1, d2, sides, variant):
 
 
 class Game:
-    def __init__(self, model, d1, d2, sides, variant):
+    def __init__(self, model, points, d2, sides, variant):
         self.model = model
-        self.D1 = d1
-        self.D2 = d2
-        self.SIDES = sides
-        self.VARIANT = variant
+        self.STARTING_POINTS = points
 
-        (
-            self.D_PUB,
-            self.D_PRI,
-            self.N_ACTIONS,
-            self.LIE_ACTION,
-            self.CUR_INDEX,
-            self.PRI_INDEX,
-            self.D_PUB_PER_PLAYER,
-        ) = calc_args(d1, d2, sides, variant)
+        # (
+        #     self.D_PUB,
+        #     self.D_PRI,
+        #     self.N_ACTIONS,
+        #     self.LIE_ACTION,
+        #     self.CUR_INDEX,
+        #     self.PRI_INDEX,
+        #     self.D_PUB_PER_PLAYER,
+        # ) = calc_args(d1, d2, sides, variant)
 
     def make_regrets(self, priv, state, last_call):
         """
